@@ -1,0 +1,3 @@
+[flake8]
+ignore=Q000
+max-line-length=92
