@@ -167,18 +167,13 @@ class GetFriends(APIView):
 
 
 def get_person_info(name):
-    # Получение информации о человеке с использованием внешних сервисов
     gender = ""
     nationality = ""
     age = None
-
-    # Получение пола человека
     gender_response = requests.get(f"https://api.genderize.io/?name={name}")
     if gender_response.status_code == 200:
         gender_data = gender_response.json()
         gender = gender_data.get("gender")
-
-    # Получение национальности человека
     nationality_response = requests.get(
         f"https://api.nationalize.io/?name={name}"
     )
@@ -187,8 +182,6 @@ def get_person_info(name):
         countries = nationality_data.get("country")
         if countries:
             nationality = countries[0].get("country_id")
-
-    # Получение возраста человека
     age_response = requests.get(f"https://api.agify.io/?name={name}")
     if age_response.status_code == 200:
         age_data = age_response.json()
