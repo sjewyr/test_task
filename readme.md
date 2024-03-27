@@ -9,4 +9,5 @@ pip install -r requirements.txt
 python manage.py migrate  
 python manage.py loaddata fixtures/data.json  
 Для запуска необходимо запустить команду  
-python manage.py runserver
+python manage.py runserver  
+Документация доступна по адресу /swagger/

@@ -6,7 +6,7 @@ from drf_yasg.views import get_schema_view
 
 
 schema_view = get_schema_view(
-    openapi.Info(title="Titles", default_version="v1"), public=True
+    openapi.Info(title="PersonAPI", default_version="v1"), public=True
 )
 
 
