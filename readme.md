@@ -3,7 +3,7 @@
 
 Для запуска необходмо установить зависимости  
 python -m venv venv  
-source venv/bin/activate
+source venv/bin/activate  
 pip install -r requirements.txt  
 Для загрузки данных необходимо загрузить данные из фикстуры  
 python manage.py migrate  
